@@ -1,0 +1,88 @@
+@import "partials/mixins";
+@import "partials/params";
+
+
+.header {
+    @include flex($dir:row);
+    height: $header-height;
+    margin-bottom: 150px;
+    color: #fff;
+    font-size: 13px;
+
+    @include laptop-screen() {
+        margin-bottom: 50px;
+    }
+
+    @include tablet() {
+        margin-bottom: 50px;
+    }
+
+    @include mobile() {
+        margin-bottom: 0;
+    }
+
+
+    & .brand {
+        img {}
+    }
+
+    & .right-tile {
+        @include flex($dir:row);
+        width: 30%;
+
+        @include laptop-screen() {
+            width: 35%;
+        }
+
+        @include small-screen() {
+            width: 50%;
+        }
+
+        & .language-geo {
+            @include cirkle();
+            background-color: $dark-blue;
+            font-family: "BPG Nino Mtavruli", sans-serif;
+
+            @include mobile() {
+                display: none;
+            }
+
+        }
+
+        & .language-eng {
+            color: #000;
+            font-family: 'Roboto', sans-serif;
+
+            @include mobile() {
+                display: none;
+            }
+        }
+
+        & .profile {
+            @include elipse();
+
+            @include mobile() {
+                display: none;
+            }
+        }
+
+        & .search {
+            & img {
+                width: 20px;
+
+                @include mobile() {
+                    display: none;
+                }
+            }
+        }
+
+        & .burger-menu {
+            @include cirkle();
+            background-color: $red;
+
+            & img {
+                width: 20px;
+            }
+        }
+    }
+}

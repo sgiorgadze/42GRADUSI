@@ -1,0 +1,33 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.archive {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+
+    &-button {
+        font-size: 12px;
+        @include elipse-line($color:$pink);
+
+        @include small-screen() {
+            width: 70%;
+            font-size: 16px;
+            text-align: center;
+            padding: 20px 10px;
+
+        }
+
+        @include mobile() {
+            width: 80%;
+        }
+
+        @include extra-small() {
+            width: 90%;
+        }
+    }
+
+    @include small-screen() {
+        justify-content: center;
+    }
+}

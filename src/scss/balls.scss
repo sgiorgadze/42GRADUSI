@@ -1,0 +1,55 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.balls {
+    @include tablet() {
+        display: none;
+    }
+
+    .ball1 {
+        position: absolute;
+        left: 52%;
+        top: 15%;
+
+        @include laptop-screen() {
+            display: none;
+        }
+    }
+
+    .ball3 {
+        position: absolute;
+        transform: rotate(90deg);
+        top: 35%;
+        left: -5%;
+
+        @include large-screen {
+            left: -8%;
+        }
+
+        @include laptop-screen() {
+            left: -9%;
+            top: 27%;
+        }
+    }
+
+
+
+    .ball2 {
+        position: absolute;
+        left: 95%;
+        top: 21%;
+
+    }
+
+    .ball4 {
+        position: absolute;
+        top: 90%;
+        left: 10%;
+    }
+
+    .ball5 {
+        position: absolute;
+        top: 90%;
+        left: 57%;
+    }
+}
